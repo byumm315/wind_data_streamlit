@@ -13,13 +13,13 @@ change_names=['월','일','시간대','섭씨온도','절대온도','이슬점',
 for i,j in zip(data.columns,change_names):
     data.rename(columns={i:j},inplace=True)
 
-st.subheader('The Scatter plots of Wind data')
 @st.cache_data()
 def func3():
     st.subheader('The Correlation of Wind data')
     st.dataframe(round(data.drop('시간대',axis=1).corr(),2))
 func3()
 
+st.subheader('The Scatter plots of Wind data')
 v1_list = list(data.drop('시간대',axis=1).columns)
 vari1 = st.selectbox(label = "Choose a First Variable", options = v1_list,key=1)
 v2_list = list(data.drop('시간대',axis=1).columns)
