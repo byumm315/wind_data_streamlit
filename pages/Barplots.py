@@ -13,7 +13,7 @@ change_names=['월','일','시간대','섭씨온도','절대온도','이슬점',
 for i,j in zip(data.columns,change_names):
     data.rename(columns={i:j},inplace=True)
 
-st.subheader('The Bar plots of Diamond data')
+st.subheader('The Bar plots of Wind data')
 v1_list = ['월','일','시간대']
 vari1 = st.selectbox(label = "Choose a First Variable", options = v1_list,key=1)
 v2_list = ['섭씨온도','절대온도','이슬점','상대습도','대기압','포화증기압','실제증기압','증기압부족량',
