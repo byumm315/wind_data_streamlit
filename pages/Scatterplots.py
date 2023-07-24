@@ -21,7 +21,7 @@ func3()
 
 st.subheader('The Scatter plots of Wind data')
 
-v_list=['월','일','섭씨온도','절대온도','이슬점','상대습도','대기압','포화증기압','실제증기압','증기압부족량',
+v_list=['월','섭씨온도','절대온도','이슬점','상대습도','대기압','포화증기압','실제증기압','증기압부족량',
               '수증기함량','공기밀도','풍향','풍속']
 vari = st.selectbox(label = "Choose a Variable", options = v_list,key=0)
 data=data.sort_values(by=vari).reset_index(drop=True)
