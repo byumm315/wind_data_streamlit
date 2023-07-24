@@ -23,9 +23,9 @@ def func3():
     st.dataframe(round(data.drop('시간대',axis=1).corr(),2))
 func3()
 
-v1_list = list((data.drop('시간대',axis=1).columns)
+v1_list = list(data.drop('시간대',axis=1).columns)
 vari1 = st.selectbox(label = "Choose a First Variable", options = v1_list,key=1)
-v2_list = list((data.drop('시간대',axis=1).columns)
+v2_list = list(data.drop('시간대',axis=1).columns)
 vari2 = st.selectbox(label = "Choose a Second Variable", options = v2_list,key=2)
 title = f"The scatter plot of {vari1} and {vari2} with Time Zone"
 fig1 = px.scatter(data, x=vari1, y=vari2, color='시간대',title=title)
