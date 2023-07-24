@@ -14,6 +14,6 @@ for i,j in zip(data.columns,change_names):
     data.rename(columns={i:j},inplace=True)
 
 st.subheader('The Histogram of Wind data')
-vari1 = st.selectbox(label = "Choose a Variable", options = data.drop('시간대',axis=1).columns,key=1)
+vari1 = st.selectbox(label = "Choose a Variable", options = data.drop(['월','일','시간대'],axis=1).columns,key=1)
 fig4 = px.histogram(data,x=vari1,nbins=100)
 st.plotly_chart(fig4)
