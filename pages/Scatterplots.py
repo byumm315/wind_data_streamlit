@@ -16,9 +16,6 @@ for i,j in zip(data.columns,change_names):
 st.subheader('The Scatter plots of Wind data')
 @st.cache_data()
 def func3():
-    fig2 = px.scatter_matrix(data.drop('시간대',axis=1))
-    fig2.update_traces(marker={'size':3})
-    st.plotly_chart(fig2)
     st.subheader('The Correlation of Wind data')
     st.dataframe(round(data.drop('시간대',axis=1).corr(),2))
 func3()
